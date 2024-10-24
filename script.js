@@ -62,4 +62,27 @@ function playGame(){
      //Prints the score to the console after each round
      console.log(`You: ${humanScore} `+ ` Computer: ${computerScore}`);
     }
-}
+
+// playRound function is called five times to play five rounds
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+
+ //champion function anounces the winner after all five rounds are played
+ //It compares the two score variables to determine the winner
+
+    function champion(){
+        if (humanScore > computerScore){
+            console.log("WELL DONE YOU WIN!");
+        } else if(humanScore === computerScore){
+            console.log("It's a tie reload to play again.")
+        }
+        else {console.log("SORRY, YOU LOOSE.");}
+    }
+   
+    champion();
+ }
+ 
+ playGame();
